@@ -1,3 +1,4 @@
+import sys
 
 window_length = 6
 def unsum(arr):
@@ -9,7 +10,13 @@ def unsum(arr):
         result[i] = arr[i] - sum(result[i + 1:min(len(arr), i + window_length)])
     return result
 
-arr = 
-sums = 
-print(arr)
-print(unsum(sums))
+def xor(arr):
+    result = 0
+    for i in arr:
+        result ^= i
+    return result
+
+with open(sys.argv[1]) as file:
+    arrays = list(map(lambda line: list(map(lambda s: int(s), line[:-1].split(","))), file.readlines()))
+
+print(sum([xor(unsum(arr)) for arr in arrays]))
