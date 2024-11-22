@@ -2,7 +2,6 @@ import random
 
 # constants
 max_int = 1_000_000_000_000_000
-max_int = 6
 window_length = 6
 
 def generate_array(length):
