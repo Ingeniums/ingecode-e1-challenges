@@ -9,8 +9,21 @@ import (
 	"github.com/Ingeniums/ingecode-e1-challenges/xor-reverse/structs"
 )
 
-func output(lines []string) {
-    os.WriteFile(fmt.Sprintf("./data/%s", "data.txt"), []byte(strings.Join(lines, "\n")), 0644)
+func strArray(arr []int) []string {
+    result := []string{}
+    for _, i := range arr {
+        result = append(result, fmt.Sprintf("%d", i))
+    }
+    return result
+}
+
+func Output(lines [][]int) {
+    out := []string{fmt.Sprintf("%d", len(lines))}
+    for _, arr := range lines {
+        out = append(out, fmt.Sprintf("%d", len(arr)))
+        out = append(out, strings.Join(strArray(arr), " "))
+    }
+    os.WriteFile(os.Args[1], []byte(strings.Join(out, "\n")), 0644)
 }
 
 func GenTree(root **structs.Node, depth int) {

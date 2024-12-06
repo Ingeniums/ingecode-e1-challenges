@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
-	"strings"
 
 	"github.com/Ingeniums/ingecode-e1-challenges/xor-reverse/generator"
 	"github.com/Ingeniums/ingecode-e1-challenges/xor-reverse/structs"
@@ -12,16 +11,8 @@ import (
 
 const NUMLINES = 6000
 
-func strArray(arr []int) []string {
-    result := []string{}
-    for _, i := range arr {
-        result = append(result, fmt.Sprintf("%d", i))
-    }
-    return result
-}
-
 func genData() {
-    lines := []string{}
+    lines := [][]int{}
     result := 0
     for i := 0; i < NUMLINES; i++ {
         var t structs.Tree
@@ -29,9 +20,9 @@ func genData() {
         results := []int{rand.Int()}
         generator.DFSXor(t.Head, &results)
         result += generator.CalcSum(t.Head)
-        lines = append(lines, strings.Join(strArray(results), ","))
+        lines = append(lines, results)
     }
-    os.WriteFile("./generator/data/data.txt", []byte(strings.Join(lines, "\n")), 0644)
+    generator.Output(lines)
     os.WriteFile("./medium - xor reverse.txt", []byte(fmt.Sprintf("%d", result)), 0644)
 }
 

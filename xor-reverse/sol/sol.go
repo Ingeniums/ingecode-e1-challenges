@@ -83,8 +83,8 @@ func calcSum(head structs.Tree) int {
     return calcSumLeft(head.Head) + calcSumRight(head.Head) - head.Head.Value
 }
 
-func parse(line string) []int {
-    values := strings.Split(line, ",")
+func parseLine(line string) []int {
+    values := strings.Split(line, " ")
     return intArray(values)
 }
 
@@ -94,12 +94,12 @@ func flag() int {
         panic(err)
     }
     s := 0
-    for _, line := range strings.Split(string(contents), "\n") {
-        if line == "" {
+    for i, line := range strings.Split(string(contents), "\n")[1:] {
+        if line == "" || i % 2 == 0 {
             continue
         }
         index = 0
-        s += calcSum(*toTree(getTreeValues(parse(line))))
+        s += calcSum(*toTree(getTreeValues(parseLine(line))))
     }
     return s
 }
