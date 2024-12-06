@@ -1,8 +1,9 @@
 from functools import cmp_to_key
+import sys
 products = {}
 
 complaints = []
-with open("./data.txt", "r") as file:
+with open(sys.argv[1], "r") as file:
     complaints = file.readlines();
 
 scores = {}
@@ -19,23 +20,32 @@ def get_score(rank):
     else:
         return 0.5
 
+def get_complaints(complaints_str):
+    # ignore first line indicating number of complaints
+    complaints_str = complaints_str[1:]
+    complaints = []
+    for c in complaints_str:
+        if not " " in c:
+            complaints.append([])
+            continue
+        complaints[-1].append(list(map(lambda x: int(x), c.split())))
+    return complaints
+
 def get_files_list(complaint):
     # remove line feed
-    complaint = complaint[:-1]
-    tuples = list(map(lambda t: list(map(lambda s: int(s), t.strip("()").split(","))), complaint.split(";")))
     visited = 0
     i = 0
-    while visited < len(tuples):
+    while visited < len(complaint):
         visited += 1
         # update the score of the product at the current rank
-        if tuples[i][1] in scores.keys():
-            scores[tuples[i][1]] += get_score(visited)
+        if complaint[i][1] in scores.keys():
+            scores[complaint[i][1]] += get_score(visited)
         else:
-            scores[tuples[i][1]] = get_score(visited)
+            scores[complaint[i][1]] = get_score(visited)
         # jump to tuple at rank (-1 to account for indexing starting at 0 rather than 1)
-        i = tuples[i][0] - 1
+        i = complaint[i][0] - 1
 
-for complaint in complaints:
+for complaint in get_complaints(complaints):
     get_files_list(complaint)
 
 
