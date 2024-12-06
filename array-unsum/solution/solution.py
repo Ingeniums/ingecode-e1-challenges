@@ -17,6 +17,11 @@ def xor(arr):
     return result
 
 with open(sys.argv[1]) as file:
-    arrays = list(map(lambda line: list(map(lambda s: int(s), line[:-1].split(","))), file.readlines()))
+    arrays = []
+    lines = file.readlines()[1:]
+    for i in range(len(lines)):
+        if i % 2 == 0:
+            continue
+        arrays.append(list(map(lambda x: int(x), lines[i].split())))
 
 print(sum([xor(unsum(arr)) for arr in arrays]))

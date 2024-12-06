@@ -1,4 +1,5 @@
 import random
+import sys
 
 # constants
 max_int = 1_000_000_000_000_000
@@ -24,7 +25,7 @@ def calculate_sub_sums(arr):
     return sums
 
 def write_flag(i):
-    with open("../easy - array unsum.txt", "w") as file:
+    with open(sys.argv[2], "w") as file:
         file.write(str(i))
 
 def generate_sums(num):
@@ -33,6 +34,14 @@ def generate_sums(num):
     write_flag(flag)
     return [calculate_sub_sums(arr) for arr in arrays]
 
+def output(arrays):
+    lines = [f"{len(arrays)}\n"]
+    for arr in arrays:
+        lines.append(f"{len(arr)}\n")
+        lines.append(" ".join(list(map(lambda e: str(e), arr))) + "\n")
+    with open(sys.argv[1], "w") as file:
+        file.writelines(lines)
+
+
 num_lines = 6000
-with open("data.txt", "w") as file:
-    file.writelines(list(map(lambda arr: ",".join(list(map(lambda i: str(i), arr))) + "\n", generate_sums(num_lines))))
+output(generate_sums(num_lines))
