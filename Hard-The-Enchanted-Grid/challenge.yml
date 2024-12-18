@@ -1,0 +1,9 @@
+id: 5
+name: "The Enchanted Grid"
+author: "Haddad Ilyes"
+description: "Given a set of points on a grid , count how many unique Glowing patterns can be formed using these points"
+difficulty: hard
+flag: "d2f1fd479765cb8a7a3f96644f387b03"
+attachements:
+  - https://drive.google.com/drive/folders/1z8A5jwgIfPwntVzhPVuyk0V4XT-Fzxyy?usp=sharing
+points: whard

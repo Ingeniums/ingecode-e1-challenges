@@ -1,0 +1,59 @@
+id: 2
+name: "Robotic Issues"
+author: "Haddad Ilyes"
+description: "Please Help this robot find his way out!"
+difficulty: easy
+flag: "446dea705d2f0a09a6659c8113180a04"
+attachements:
+  - https://drive.google.com/drive/folders/1uHrHQAF3lpocpZb8QSpzL2xAVgRNKBod?usp=sharing
+points: weasy
+
+id: 3
+name: "Rotate Me"
+author: "Haddad Ilyes"
+description: "Just rotate me!"
+difficulty: easy
+flag: "2ec44af2ab1185f8768595a853e01ee5"
+attachements:
+  - https://drive.google.com/drive/folders/1WP5CSKxcQahvaG8E69irKtUdOls5HzvY?usp=sharing
+points: weasy
+
+id: 4
+name: "Matrix Operation Game"
+author: "Haddad Ilyes"
+description: "You are given an N x M grid where each cell contains a positive integer. You can perform an operation where you select any subrectangle and increase or decrease all values in it by 1. The objective is to make all values in the grid equal with the minimum number of operations."
+difficulty: hard
+flag: "1ce9e4489d3504b411df6d91f4c83e71"
+attachements:
+  - https://drive.google.com/drive/folders/1yijnAAEqAj1XH_Tr4SMg6oER62q98AL_?usp=sharing
+points: whard
+
+id: 5
+name: "Palindromic Dance"
+author: "Haddad Ilyes"
+description: "Given a string s , find the count of all the palindromic subsequences of s."
+difficulty: hard
+flag: "68ebcb6dfa6979f095f8b73936f54716"
+attachements:
+  - https://drive.google.com/drive/folders/1zexQ9iKTnMaabdnceXG4lzcFm2I2WICh?usp=sharing
+points: whard
+
+id: 6
+name: "The Enchanted Grid"
+author: "Haddad Ilyes"
+description: "Given a set of points on a grid , count how many unique Glowing patterns can be formed using these points"
+difficulty: hard
+flag: "d2f1fd479765cb8a7a3f96644f387b03"
+attachements:
+  - https://drive.google.com/drive/folders/1z8A5jwgIfPwntVzhPVuyk0V4XT-Fzxyy?usp=sharing
+points: whard
+
+id: 7
+name: "Warehouse Problem"
+author: "Haddad Ilyes"
+description: "A warehouse can store items with a combined total weight not exceeding a given limit. There are n items in the warehouse, each with a weight and a value. The warehouse manager can include any fraction of an item in the storage to maximize the total value of items stored."
+difficulty: hard
+flag: "e00f9c196e72d9ddaefe103526a81725"
+attachements:
+  - https://drive.google.com/drive/folders/1LqYjVDtjK-5dftwihQYe0Zbv-sysSEja?usp=sharing
+points: whard

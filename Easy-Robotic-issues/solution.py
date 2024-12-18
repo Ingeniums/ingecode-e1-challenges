@@ -1,9 +1,10 @@
 
 
 
-def get_input(file=__file__.replace(__file__.split('/')[-1], '')+'/input.txt'):
+def get_input(file=__file__.replace(__file__.split('/')[-1], '')+'input.txt'):
     with open(file, 'r') as f:
-        commands = f.read().strip().split(',')
+        
+        commands = f.read().strip().split('\n')[1:]
         return commands
     
 def robot_path(commands):
@@ -24,6 +25,7 @@ def robot_path(commands):
 
 def main():
     test_cases = get_input()
+    test_cases = ["DLRRDRDUDRLLUDURDDRULLURLURLULUDDLUDLULLDLDDDLRURDLUDLLD", "UUUDDDRRL"]
     flag = ""
     for case in test_cases:
         flag += robot_path(case) +","
@@ -31,7 +33,7 @@ def main():
     print(flag)
     #md5 hash the string
     import hashlib
-    print(hashlib.md5(flag.encode()).hexdigest())
+    print(hashlib.md5(flag.encode('utf-8')).hexdigest())
 
 
 if __name__ == '__main__':

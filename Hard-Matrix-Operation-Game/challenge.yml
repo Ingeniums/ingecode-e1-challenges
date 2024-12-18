@@ -1,0 +1,9 @@
+id: 3
+name: "Matrix Operation Game"
+author: "Haddad Ilyes"
+description: "You are given an N x M grid where each cell contains a positive integer. You can perform an operation where you select any subrectangle and increase or decrease all values in it by 1. The objective is to make all values in the grid equal with the minimum number of operations."
+difficulty: hard
+flag: "1ce9e4489d3504b411df6d91f4c83e71"
+attachements:
+  - https://drive.google.com/drive/folders/1yijnAAEqAj1XH_Tr4SMg6oER62q98AL_?usp=sharing
+points: whard

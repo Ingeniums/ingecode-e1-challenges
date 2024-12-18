@@ -13,5 +13,5 @@ for i in range (2000):
     cases.append(cas)
         
 f = open(__file__.replace(__file__.split('/')[-1], '') + 'input.txt', 'w')
-f.write(','.join(cases))
+f.write('\n'.join(cases))
 f.close()

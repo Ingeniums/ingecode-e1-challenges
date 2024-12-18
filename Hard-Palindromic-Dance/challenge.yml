@@ -1,0 +1,9 @@
+id: 4
+name: "Palindromic Dance"
+author: "Haddad Ilyes"
+description: "Given a string s , find the count of all the palindromic subsequences of s."
+difficulty: hard
+flag: "68ebcb6dfa6979f095f8b73936f54716"
+attachements:
+  - https://drive.google.com/drive/folders/1zexQ9iKTnMaabdnceXG4lzcFm2I2WICh?usp=sharing
+points: whard

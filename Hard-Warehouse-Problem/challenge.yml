@@ -1,0 +1,9 @@
+id: 6
+name: "Warehouse Problem"
+author: "Haddad Ilyes"
+description: "A warehouse can store items with a combined total weight not exceeding a given limit. There are n items in the warehouse, each with a weight and a value. The warehouse manager can include any fraction of an item in the storage to maximize the total value of items stored."
+difficulty: hard
+flag: "e00f9c196e72d9ddaefe103526a81725"
+attachements:
+  - https://drive.google.com/drive/folders/1LqYjVDtjK-5dftwihQYe0Zbv-sysSEja?usp=sharing
+points: whard
